@@ -17,12 +17,13 @@ class GoLTest extends FunSuite{
     assert(LivingCell.isDead == false, "Cell is not living")
   }
 
+  test("a living cell dies when it has no neighbor"){
+    assert(LivingCell.nextState(0).isDead,"Cell should have died of loneliness")
+  }
+
   test("a living cell dies when it has one neighbor"){
     assert(LivingCell.nextState(1).isDead,"Cell should have died of loneliness")
   }
 
-  test("a living cell dies when it has no neighbor"){
-    assert(LivingCell.nextState(0).isDead,"Cell should have died of loneliness")
-  }
 
 }
