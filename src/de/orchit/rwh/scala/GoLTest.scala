@@ -5,7 +5,9 @@ import org.scalatest.FunSuite
 
 class GoLTest extends FunSuite{
   object DeadCell{val isDead=true}
-  object LivingCell{val isDead=false}
+  object LivingCell{val isDead=false
+  def nextState(neighbors:Int) = LivingCell
+  }
 
   test("we have a dead cell"){
     assert(DeadCell isDead,"Cell is not dead")
