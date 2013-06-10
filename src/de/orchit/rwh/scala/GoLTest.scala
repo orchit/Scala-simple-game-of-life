@@ -46,7 +46,7 @@ class GoLTest extends FunSuite {
 
     def getNeighborCount(row:Int)(col:Int)={
       var count=0;
-      for (row <- 0 to 8; col <- 0 to 8 if getCell(row)(col)==LivingCell)
+      for (rowDelta <- -1 to 1; colDelta <- -1 to 1 if getCell(row+rowDelta)(col+colDelta)==LivingCell)
         count+=1
       count
     }
