@@ -118,7 +118,6 @@ class GoLTest extends FunSuite {
     val field = new Field
     field.setCell(0)(1)(LivingCell)
     field.setCell(1)(3)(LivingCell)
-    field.getNeighborCount(1)(1)
-
+    assert(field.getNeighborCount(1)(1) === 2)
   }
 }
