@@ -6,6 +6,7 @@ import org.scalatest.FunSuite
 class GoLTest extends FunSuite {
   trait Cell{
     def isDead:Boolean
+    def nextState(neighbors:Int):Cell
   }
   object DeadCell extends Cell{
     def isDead = true
