@@ -33,7 +33,7 @@ class GoLTest extends FunSuite {
     val rows = 9
     val cols = 9
     private val map: Array[Array[Cell]] = Array.ofDim(rows, cols)
-    for (row <- 0 to 8; col <- 0 to 8)
+    for (row <- 0 to rows-1; col <- 0 to cols-1)
       map(row)(col) = DeadCell
 
     def getCell(row: Int)(col: Int) = {
@@ -115,7 +115,7 @@ class GoLTest extends FunSuite {
 
   test("the field is initially filled with dead cells") {
     val field = new Field
-    for (row <- 0 to 8; col <- 0 to 8)
+    for (row <- 0 to field.rows-1; col <- 0 to field.cols-1)
       assert(field.getCell(row)(col) === DeadCell)
   }
 
@@ -146,7 +146,7 @@ class GoLTest extends FunSuite {
   }
   test("we can ask for the neighborcount of the cell at 1,2 with 8 neighbors") {
     val field = new Field
-    for (row <- 0 to 8; col <- 0 to 8)
+    for (row <- 0 to field.rows-1; col <- 0 to field.cols-1)
       field.setCell(row)(col)(LivingCell)
     assert(field.getNeighborCount(1)(2) === 8)
   }
@@ -181,7 +181,7 @@ class GoLTest extends FunSuite {
       Array(d,d,d,d,d,d,d,d,d),
       Array(d,d,d,d,d,d,d,d,d)
     )
-    for (row <- 0 to 8; col <- 0 to 8)
+    for (row <- 0 to field.rows-1; col <- 0 to field.cols-1)
       field.setCell(row)(col)(init(row)(col))
 
     val result = field.iterate()
@@ -196,7 +196,7 @@ class GoLTest extends FunSuite {
       Array(d,d,d,d,d,d,d,d,d),
       Array(d,d,d,d,d,d,d,d,d)
     )
-    for (row <- 0 to 8; col <- 0 to 8)
+    for (row <- 0 to field.rows-1; col <- 0 to field.cols-1)
       assert(result.getCell(row)(col)===target(row)(col), "("+row+")("+col+")")
   }
 }
