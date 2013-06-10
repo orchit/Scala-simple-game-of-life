@@ -32,23 +32,24 @@ class GoLTest extends FunSuite {
   class Field {
     val rows = 9
     val cols = 9
-    private val map:Array[Array[Cell]] = Array.ofDim(rows,cols)
+    private val map: Array[Array[Cell]] = Array.ofDim(rows, cols)
     for (row <- 0 to 8; col <- 0 to 8)
-      map(row)(col)=DeadCell
+      map(row)(col) = DeadCell
 
     def getCell(row: Int)(col: Int) = {
       map(row)(col)
     }
 
-    def setCell(row: Int)(col: Int)(cell:Cell){
-      map(row)(col)=cell
+    def setCell(row: Int)(col: Int)(cell: Cell) {
+      map(row)(col) = cell
     }
 
-    def getNeighborCount(row:Int)(col:Int)={
-      var count=0;
+    def getNeighborCount(row: Int)(col: Int) = {
+      var count = 0;
       for (rowDelta <- -1 to 1; colDelta <- -1 to 1
-           if getCell(row+rowDelta)(col+colDelta)==LivingCell)
-        count+=1
+           if getCell(row + rowDelta)(col + colDelta) == LivingCell
+           if rowDelta != 0 || colDelta != 0)
+        count += 1
       count
     }
   }
@@ -108,24 +109,24 @@ class GoLTest extends FunSuite {
       assert(field.getCell(row)(col) === DeadCell)
   }
 
-  test("We can set values in the field boundaries"){
+  test("We can set values in the field boundaries") {
     val field = new Field
     field.setCell(2)(3)(LivingCell)
     field.setCell(0)(3)(LivingCell)
     field.setCell(2)(8)(LivingCell)
-    assert(field.getCell(2)(3)===LivingCell)
-    assert(field.getCell(0)(3)===LivingCell)
-    assert(field.getCell(2)(8)===LivingCell)
+    assert(field.getCell(2)(3) === LivingCell)
+    assert(field.getCell(0)(3) === LivingCell)
+    assert(field.getCell(2)(8) === LivingCell)
   }
 
-  test("we can ask for the neighborcount of the cell at 1,2 with 2 neighbors"){
+  test("we can ask for the neighborcount of the cell at 1,2 with 2 neighbors") {
     val field = new Field
     field.setCell(0)(1)(LivingCell)
     field.setCell(1)(3)(LivingCell)
     assert(field.getNeighborCount(1)(2) === 2)
   }
 
-  test("we can ask for the neighborcount of the cell at 1,2 with 4 neighbors"){
+  test("we can ask for the neighborcount of the cell at 1,2 with 4 neighbors") {
     val field = new Field
     field.setCell(0)(1)(LivingCell)
     field.setCell(1)(1)(LivingCell)
@@ -134,7 +135,7 @@ class GoLTest extends FunSuite {
     assert(field.getNeighborCount(1)(2) === 4)
   }
 
-  test("cell in question does not count as neighbor"){
+  test("cell in question does not count as neighbor") {
     val field = new Field
     field.setCell(0)(1)(LivingCell)
     field.setCell(1)(2)(LivingCell)
