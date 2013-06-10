@@ -33,8 +33,9 @@ class GoLTest extends FunSuite {
     val rows = 9
     val cols = 9
     private val map: Array[Array[Cell]] = Array.ofDim(rows, cols)
-    for (row <- 0 to rows-1; col <- 0 to cols-1)
-      map(row)(col) = DeadCell
+    foreach(
+      (row, col, _) => map(row)(col) = DeadCell
+    )
 
     def getCell(row: Int)(col: Int) = {
       map(row)(col)
@@ -44,24 +45,34 @@ class GoLTest extends FunSuite {
       map(row)(col) = cell
     }
 
+    def foreach(func: ((Int, Int, Cell) => Unit)) {
+      for (row <- 0 to rows - 1; col <- 0 to cols - 1)
+        func(row, col, map(row)(col))
+    }
+
     def getNeighborCount(row: Int)(col: Int) = {
+      def checkBoundaries(pos:Int,delta:Int, outerBoundary:Int) = {
+        pos + delta >= 0 && pos + delta < outerBoundary
+      }
       var count = 0;
       for (rowDelta <- -1 to 1; colDelta <- -1 to 1
-            if row+ rowDelta>=0 && row+rowDelta<rows
-            if col+ colDelta>=0 && col+colDelta<cols
-            if getCell(row + rowDelta)(col + colDelta) == LivingCell
-            if rowDelta != 0 || colDelta != 0)
+           if checkBoundaries(row,rowDelta,rows)
+           if checkBoundaries(col,colDelta,cols)
+           if getCell(row + rowDelta)(col + colDelta) == LivingCell
+           if rowDelta != 0 || colDelta != 0)
         count += 1
       count
     }
 
-    def iterate()={
+    def iterate() = {
       val result = new Field
-      for (row <- 0 to rows-1; col <- 0 to cols-1)
-        result.setCell(row)(col)(
-          map(row)(col)
-            .nextState(
-              getNeighborCount(row)(col)))
+      foreach(
+        (row, col, cell) =>
+          result.setCell(row)(col)(
+            cell
+              .nextState(getNeighborCount(row)(col))
+          )
+      )
       result
     }
   }
@@ -117,7 +128,7 @@ class GoLTest extends FunSuite {
 
   test("the field is initially filled with dead cells") {
     val field = new Field
-    for (row <- 0 to field.rows-1; col <- 0 to field.cols-1)
+    for (row <- 0 to field.rows - 1; col <- 0 to field.cols - 1)
       assert(field.getCell(row)(col) === DeadCell)
   }
 
@@ -148,8 +159,9 @@ class GoLTest extends FunSuite {
   }
   test("we can ask for the neighborcount of the cell at 1,2 with 8 neighbors") {
     val field = new Field
-    for (row <- 0 to field.rows-1; col <- 0 to field.cols-1)
-      field.setCell(row)(col)(LivingCell)
+    field.foreach(
+      (row, col, _) => field.setCell(row)(col)(LivingCell)
+    )
     assert(field.getNeighborCount(1)(2) === 8)
   }
 
@@ -162,77 +174,83 @@ class GoLTest extends FunSuite {
     assert(field.getNeighborCount(1)(2) === 3)
   }
 
-  test("on field iteration we get a new field"){
+  test("on field iteration we get a new field") {
     val field = new Field
     val field2 = field.iterate
     assert(field != field2)
   }
 
-  test("iteration with three living cells in a row will result in 3 cells orthogonal to the row"){
-    val d:Cell = DeadCell
-    val l:Cell = LivingCell
+  test("iteration with three living cells in a row will result in 3 cells orthogonal to the row") {
+    val d: Cell = DeadCell
+    val l: Cell = LivingCell
     val field = new Field
     val init = Array(
-      Array(d,d,d,d,d,d,d,d,d),
-      Array(d,d,d,d,d,d,d,d,d),
-      Array(d,d,d,d,d,d,d,d,d),
-      Array(d,d,d,l,l,l,d,d,d),
-      Array(d,d,d,d,d,d,d,d,d),
-      Array(d,d,d,d,d,d,d,d,d),
-      Array(d,d,d,d,d,d,d,d,d),
-      Array(d,d,d,d,d,d,d,d,d),
-      Array(d,d,d,d,d,d,d,d,d)
+      Array(d, d, d, d, d, d, d, d, d),
+      Array(d, d, d, d, d, d, d, d, d),
+      Array(d, d, d, d, d, d, d, d, d),
+      Array(d, d, d, l, l, l, d, d, d),
+      Array(d, d, d, d, d, d, d, d, d),
+      Array(d, d, d, d, d, d, d, d, d),
+      Array(d, d, d, d, d, d, d, d, d),
+      Array(d, d, d, d, d, d, d, d, d),
+      Array(d, d, d, d, d, d, d, d, d)
     )
-    for (row <- 0 to field.rows-1; col <- 0 to field.cols-1)
-      field.setCell(row)(col)(init(row)(col))
+    field.foreach(
+      (row, col, _) => field.setCell(row)(col)(init(row)(col))
+    )
 
     val result = field.iterate()
     val target = Array(
-      Array(d,d,d,d,d,d,d,d,d),
-      Array(d,d,d,d,d,d,d,d,d),
-      Array(d,d,d,d,l,d,d,d,d),
-      Array(d,d,d,d,l,d,d,d,d),
-      Array(d,d,d,d,l,d,d,d,d),
-      Array(d,d,d,d,d,d,d,d,d),
-      Array(d,d,d,d,d,d,d,d,d),
-      Array(d,d,d,d,d,d,d,d,d),
-      Array(d,d,d,d,d,d,d,d,d)
+      Array(d, d, d, d, d, d, d, d, d),
+      Array(d, d, d, d, d, d, d, d, d),
+      Array(d, d, d, d, l, d, d, d, d),
+      Array(d, d, d, d, l, d, d, d, d),
+      Array(d, d, d, d, l, d, d, d, d),
+      Array(d, d, d, d, d, d, d, d, d),
+      Array(d, d, d, d, d, d, d, d, d),
+      Array(d, d, d, d, d, d, d, d, d),
+      Array(d, d, d, d, d, d, d, d, d)
     )
-    for (row <- 0 to field.rows-1; col <- 0 to field.cols-1)
-      assert(result.getCell(row)(col)===target(row)(col), "("+row+")("+col+")")
+    result.foreach(
+      (row, col, cell) =>
+        assert(cell === target(row)(col), "(" + row + ")(" + col + ")")
+    )
   }
 
-  test("iteration with three living cells blocks at the border will result in 2 cells orthogonal to the block"){
-    val d:Cell = DeadCell
-    val l:Cell = LivingCell
+  test("iteration with three living cells blocks at the border will result in 2 cells orthogonal to the block") {
+    val d: Cell = DeadCell
+    val l: Cell = LivingCell
     val field = new Field
     val init = Array(
-      Array(l,d,d,d,d,d,d,d,d),
-      Array(l,d,d,d,d,d,d,d,d),
-      Array(l,d,d,d,d,d,d,d,d),
-      Array(d,d,d,l,l,l,d,d,d),
-      Array(d,d,d,d,d,d,d,d,d),
-      Array(d,d,d,d,d,d,d,d,d),
-      Array(d,d,d,d,d,d,d,d,l),
-      Array(d,d,d,d,d,d,d,d,l),
-      Array(l,l,l,d,d,d,d,d,l)
+      Array(l, d, d, d, d, d, d, d, d),
+      Array(l, d, d, d, d, d, d, d, d),
+      Array(l, d, d, d, d, d, d, d, d),
+      Array(d, d, d, l, l, l, d, d, d),
+      Array(d, d, d, d, d, d, d, d, d),
+      Array(d, d, d, d, d, d, d, d, d),
+      Array(d, d, d, d, d, d, d, d, l),
+      Array(d, d, d, d, d, d, d, d, l),
+      Array(l, l, l, d, d, d, d, d, l)
     )
-    for (row <- 0 to field.rows-1; col <- 0 to field.cols-1)
-      field.setCell(row)(col)(init(row)(col))
+    field.foreach(
+      (row, col, _) => field.setCell(row)(col)(init(row)(col))
+    )
 
     val result = field.iterate()
     val target = Array(
-      Array(d,d,d,d,d,d,d,d,d),
-      Array(l,l,d,d,d,d,d,d,d),
-      Array(d,d,d,d,l,d,d,d,d),
-      Array(d,d,d,d,l,d,d,d,d),
-      Array(d,d,d,d,l,d,d,d,d),
-      Array(d,d,d,d,d,d,d,d,d),
-      Array(d,d,d,d,d,d,d,d,d),
-      Array(d,l,d,d,d,d,d,l,l),
-      Array(d,l,d,d,d,d,d,d,d)
+      Array(d, d, d, d, d, d, d, d, d),
+      Array(l, l, d, d, d, d, d, d, d),
+      Array(d, d, d, d, l, d, d, d, d),
+      Array(d, d, d, d, l, d, d, d, d),
+      Array(d, d, d, d, l, d, d, d, d),
+      Array(d, d, d, d, d, d, d, d, d),
+      Array(d, d, d, d, d, d, d, d, d),
+      Array(d, l, d, d, d, d, d, l, l),
+      Array(d, l, d, d, d, d, d, d, d)
     )
-    for (row <- 0 to field.rows-1; col <- 0 to field.cols-1)
-      assert(result.getCell(row)(col)===target(row)(col), "("+row+")("+col+")")
+    result.foreach(
+      (row, col, cell) =>
+        assert(cell === target(row)(col), "(" + row + ")(" + col + ")")
+    )
   }
 }
