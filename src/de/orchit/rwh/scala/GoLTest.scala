@@ -54,7 +54,13 @@ class GoLTest extends FunSuite {
     }
 
     def iterate()={
-      new Field
+      val result = new Field
+      for (row <- 1 to 7; col <- 1 to 7)
+        result.setCell(row)(col)(
+          map(row)(col)
+            .nextState(
+              getNeighborCount(row)(col)))
+      result
     }
   }
 
