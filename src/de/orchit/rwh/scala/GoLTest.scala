@@ -1,6 +1,8 @@
 package de.orchit.rwh.scala
 
+import org.scalatest.FunSuite
 
-class GoLTest {
+
+class GoLTest extends FunSuite{
 
 }
