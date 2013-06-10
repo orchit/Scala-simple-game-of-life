@@ -5,19 +5,18 @@ import org.scalatest.FunSuite
 
 class GoLTest extends FunSuite {
   trait Cell{
-    def isDead:Boolean
+    def isDead={
+      this==DeadCell
+    }
     def nextState(neighbors:Int):Cell
   }
   object DeadCell extends Cell{
-    def isDead = true
     def nextState(Neighbors:Int)={
       LivingCell
     }
   }
 
   object LivingCell extends Cell{
-    def isDead = false
-
     def nextState(neighbors: Int) = {
         if(neighbors<2 || neighbors > 3) DeadCell
         else LivingCell
