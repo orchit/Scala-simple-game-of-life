@@ -99,5 +99,10 @@ class GoLTest extends FunSuite {
   test("We can set values in the field boundaries"){
     val field = new Field
     field.setCell(2)(3)(LivingCell)
+    field.setCell(0)(3)(LivingCell)
+    field.setCell(2)(8)(LivingCell)
+    assert(field.getCell(2)(3)===LivingCell)
+    assert(field.getCell(0)(3)===LivingCell)
+    assert(field.getCell(2)(8)===LivingCell)
   }
 }
