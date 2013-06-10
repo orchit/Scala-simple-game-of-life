@@ -30,6 +30,7 @@ class GoLTest extends FunSuite {
   }
   class Field{
     val rows = 9
+    val cols = 8
   }
 
   test("we have a dead cell") {
