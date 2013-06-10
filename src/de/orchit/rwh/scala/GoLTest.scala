@@ -52,6 +52,10 @@ class GoLTest extends FunSuite {
         count += 1
       count
     }
+
+    def iterate()={
+      this
+    }
   }
 
   test("we have a dead cell") {
