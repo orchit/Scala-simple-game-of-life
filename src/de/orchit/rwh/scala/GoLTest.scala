@@ -9,6 +9,9 @@ class GoLTest extends FunSuite {
   }
   object DeadCell extends Cell{
     def isDead = true
+    def nextState(Neighbors:Int)={
+      LivingCell
+    }
   }
 
   object LivingCell extends Cell{
