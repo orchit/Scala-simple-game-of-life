@@ -45,7 +45,7 @@ class GoLTest extends FunSuite {
     }
 
     def getNeighborCount(row:Int)(col:Int)={
-      0
+      2
     }
   }
 
