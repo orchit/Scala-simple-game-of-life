@@ -73,5 +73,8 @@ class GoLTest extends FunSuite {
     assert(DeadCell.nextState(4).isDead === true, "Cell should have still be dead")
   }
 
+  test("we have a field"){
+    new Field
+  }
 
 }
