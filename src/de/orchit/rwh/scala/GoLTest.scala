@@ -47,15 +47,17 @@ class GoLTest extends FunSuite {
     def getNeighborCount(row: Int)(col: Int) = {
       var count = 0;
       for (rowDelta <- -1 to 1; colDelta <- -1 to 1
-           if getCell(row + rowDelta)(col + colDelta) == LivingCell
-           if rowDelta != 0 || colDelta != 0)
+            if row+ rowDelta>=0 && row+rowDelta<rows
+            if col+ colDelta>=0 && col+colDelta<cols
+            if getCell(row + rowDelta)(col + colDelta) == LivingCell
+            if rowDelta != 0 || colDelta != 0)
         count += 1
       count
     }
 
     def iterate()={
       val result = new Field
-      for (row <- 1 to 7; col <- 1 to 7)
+      for (row <- 0 to rows-1; col <- 0 to cols-1)
         result.setCell(row)(col)(
           map(row)(col)
             .nextState(
