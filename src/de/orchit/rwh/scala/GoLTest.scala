@@ -15,7 +15,7 @@ class GoLTest extends FunSuite {
     def isDead = false
 
     def nextState(neighbors: Int) = {
-        if(neighbors<2) DeadCell
+        if(neighbors<2 || neighbors == 4) DeadCell
         else LivingCell
     }
   }
