@@ -28,6 +28,9 @@ class GoLTest extends FunSuite {
       else LivingCell
     }
   }
+  class Field{
+
+  }
 
   test("we have a dead cell") {
     assert(DeadCell isDead, "Cell is not dead")
