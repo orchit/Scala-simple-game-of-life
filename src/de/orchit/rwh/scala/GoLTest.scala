@@ -43,6 +43,10 @@ class GoLTest extends FunSuite {
     def setCell(row: Int)(col: Int)(cell:Cell){
       map(row)(col)=cell
     }
+
+    def getNeighborCount(row:Int)(col:Int)={
+      0
+    }
   }
 
   test("we have a dead cell") {
