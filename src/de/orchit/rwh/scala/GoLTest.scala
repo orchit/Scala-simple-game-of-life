@@ -36,6 +36,9 @@ class GoLTest extends FunSuite {
     def getCell(row: Int)(col: Int) = {
       DeadCell
     }
+    def setCell(row: Int)(col: Int)(cell:Cell){
+
+    }
   }
 
   test("we have a dead cell") {
@@ -95,6 +98,6 @@ class GoLTest extends FunSuite {
 
   test("We can set values in the field boundaries"){
     val field = new Field
-    field.setCell(2,3,LivingCell)
+    field.setCell(2)(3)(LivingCell)
   }
 }
