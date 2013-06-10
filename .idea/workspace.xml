@@ -7,9 +7,9 @@
     </list>
     <ignored path="Scala-Demo.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370857786663" ignored="false" />
+    <file path="/Dummy.txt" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370857871981" ignored="false" />
     <file path="/DateTest.scala" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370800257224" ignored="false" />
-    <file path="/GoLTest.scala" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370857836849" ignored="false" />
+    <file path="/GoLTest.scala" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370857878524" ignored="false" />
     <file path="$USER_HOME$/projects/groupon/global-payment-service/gps-webapp/src/integration/java/de/groupon/api/payment/test/DBFixtureHelper.java" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370849802643" ignored="false" />
     <file path="$USER_HOME$/projects/groupon/global-payment-service/gps-webapp/src/main/java/de/groupon/api/config/profile/PropertyFullAppConfig.java" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370849638436" ignored="false" />
     <file path="$USER_HOME$/projects/groupon/global-payment-service/gps-core/src/main/java/de/groupon/api/payment/updatableconfig/PropertyStorage.java" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370849638436" ignored="false" />
@@ -98,7 +98,7 @@
       <file leaf-file-name="GoLTest.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/de/orchit/rwh/scala/GoLTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="37" selection-start="202" selection-end="202" vertical-scroll-proportion="0.19138756">
+            <state line="8" column="41" selection-start="206" selection-end="206" vertical-scroll-proportion="0.19138756">
               <folding />
             </state>
           </provider>
@@ -474,7 +474,11 @@
       <created>1370857789509</created>
       <updated>1370857789509</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="13 red a living cell with one neighbor dies (compiles)">
+      <created>1370857874485</created>
+      <updated>1370857874485</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -553,7 +557,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="12 red a living cell with one neighbor dies" />
+    <option name="LAST_COMMIT_MESSAGE" value="13 red a living cell with one neighbor dies (compiles)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -585,6 +589,7 @@
     <MESSAGE value="10 red we can have a living cell (compiles)" />
     <MESSAGE value="11 green we can have a living cell" />
     <MESSAGE value="12 red a living cell with one neighbor dies" />
+    <MESSAGE value="13 red a living cell with one neighbor dies (compiles)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -622,7 +627,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/de/orchit/rwh/scala/GoLTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="37" selection-start="202" selection-end="202" vertical-scroll-proportion="0.19138756">
+        <state line="8" column="41" selection-start="206" selection-end="206" vertical-scroll-proportion="0.19138756">
           <folding />
         </state>
       </provider>
