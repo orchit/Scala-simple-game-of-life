@@ -10,4 +10,7 @@ class GoLTest extends FunSuite{
     assert(DeadCell isDead,"Cell is not dead")
   }
 
+  test("we can have a living cell"){
+    assert(LivingCell.isDead == false, "Cell is not living")
+  }
 }
