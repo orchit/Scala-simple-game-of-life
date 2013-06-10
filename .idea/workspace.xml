@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6674023c-f30f-41ba-8d13-18c941cb5ba1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/de/orchit/rwh/scala/GoLTest.scala" afterPath="$PROJECT_DIR$/src/de/orchit/rwh/scala/GoLTest.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Scala-Demo.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370855858684" ignored="false" />
+    <file path="/Dummy.txt" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370855887591" ignored="false" />
     <file path="/DateTest.scala" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370800257224" ignored="false" />
-    <file path="/GoLTest.scala" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370855868969" ignored="false" />
+    <file path="/GoLTest.scala" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370855914486" ignored="false" />
     <file path="$USER_HOME$/projects/groupon/global-payment-service/gps-webapp/src/integration/java/de/groupon/api/payment/test/DBFixtureHelper.java" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370849802643" ignored="false" />
     <file path="$USER_HOME$/projects/groupon/global-payment-service/gps-webapp/src/main/java/de/groupon/api/config/profile/PropertyFullAppConfig.java" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370849638436" ignored="false" />
     <file path="$USER_HOME$/projects/groupon/global-payment-service/gps-core/src/main/java/de/groupon/api/payment/updatableconfig/PropertyStorage.java" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370849638436" ignored="false" />
@@ -97,7 +97,7 @@
       <file leaf-file-name="GoLTest.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/de/orchit/rwh/scala/GoLTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="32" selection-start="125" selection-end="125" vertical-scroll-proportion="0.09453782">
+            <state line="6" column="31" selection-start="124" selection-end="124" vertical-scroll-proportion="0.14354067">
               <folding />
             </state>
           </provider>
@@ -227,6 +227,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
@@ -440,7 +441,11 @@
       <created>1370855861371</created>
       <updated>1370855861371</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="6 red we have a dead cell (compiles)">
+      <created>1370855892637</created>
+      <updated>1370855892637</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -468,8 +473,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Jenkins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24924774" sideWeight="0.671066" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24924774" sideWeight="0.67005074" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32994923" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -519,7 +524,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="5 red we have a dead cell" />
+    <option name="LAST_COMMIT_MESSAGE" value="6 red we have a dead cell (compiles)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -543,6 +548,7 @@
     <MESSAGE value="3 red we have a cell" />
     <MESSAGE value="4 green we have a cell" />
     <MESSAGE value="5 red we have a dead cell" />
+    <MESSAGE value="6 red we have a dead cell (compiles)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -580,7 +586,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/de/orchit/rwh/scala/GoLTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="32" selection-start="125" selection-end="125" vertical-scroll-proportion="0.09453782">
+        <state line="6" column="31" selection-start="124" selection-end="124" vertical-scroll-proportion="0.14354067">
           <folding />
         </state>
       </provider>
