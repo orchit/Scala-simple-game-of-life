@@ -82,4 +82,10 @@ class GoLTest extends FunSuite {
     assert((new Field).cols === 9)
   }
 
+  test("the field is initially filled with dead cells"){
+    val field = new Field
+    for(row <- 0 to 8; col <- 0 to 8 )
+      assert(field.getCell(row)(col) === DeadCell)
+  }
+
 }
