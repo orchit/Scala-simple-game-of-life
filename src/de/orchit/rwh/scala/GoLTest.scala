@@ -54,7 +54,7 @@ class GoLTest extends FunSuite {
     }
 
     def iterate()={
-      this
+      new Field
     }
   }
 
