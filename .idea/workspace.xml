@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6674023c-f30f-41ba-8d13-18c941cb5ba1" name="Default" comment="">
+    <list default="true" id="6674023c-f30f-41ba-8d13-18c941cb5ba1" name="Default" comment="10 red we can have a living cell (compiles)">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/de/orchit/rwh/scala/GoLTest.scala" afterPath="$PROJECT_DIR$/src/de/orchit/rwh/scala/GoLTest.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Scala-Demo.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370857414860" ignored="false" />
+    <file path="/Dummy.txt" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370857616901" ignored="false" />
     <file path="/DateTest.scala" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370800257224" ignored="false" />
-    <file path="/GoLTest.scala" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370857368556" ignored="false" />
+    <file path="/GoLTest.scala" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370857598187" ignored="false" />
     <file path="$USER_HOME$/projects/groupon/global-payment-service/gps-webapp/src/integration/java/de/groupon/api/payment/test/DBFixtureHelper.java" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370849802643" ignored="false" />
     <file path="$USER_HOME$/projects/groupon/global-payment-service/gps-webapp/src/main/java/de/groupon/api/config/profile/PropertyFullAppConfig.java" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370849638436" ignored="false" />
     <file path="$USER_HOME$/projects/groupon/global-payment-service/gps-core/src/main/java/de/groupon/api/payment/updatableconfig/PropertyStorage.java" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370849638436" ignored="false" />
@@ -98,7 +98,7 @@
       <file leaf-file-name="GoLTest.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/de/orchit/rwh/scala/GoLTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="30" selection-start="158" selection-end="158" vertical-scroll-proportion="0.16719745">
+            <state line="15" column="3" selection-start="351" selection-end="351" vertical-scroll-proportion="0.35828024">
               <folding />
             </state>
           </provider>
@@ -462,7 +462,11 @@
       <created>1370857428462</created>
       <updated>1370857428462</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="10 red we can have a living cell (compiles)">
+      <created>1370857452933</created>
+      <updated>1370857452933</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -541,7 +545,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="10 red we can have a living cell" />
+    <option name="LAST_COMMIT_MESSAGE" value="10 red we can have a living cell (compiles)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -570,6 +574,7 @@
     <MESSAGE value="8 green REFACTOR Cell to DeadCell" />
     <MESSAGE value="9 green REFACTOR Class to Object" />
     <MESSAGE value="10 red we can have a living cell" />
+    <MESSAGE value="10 red we can have a living cell (compiles)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -607,7 +612,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/de/orchit/rwh/scala/GoLTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="30" selection-start="158" selection-end="158" vertical-scroll-proportion="0.16719745">
+        <state line="15" column="3" selection-start="351" selection-end="351" vertical-scroll-proportion="0.35828024">
           <folding />
         </state>
       </provider>
