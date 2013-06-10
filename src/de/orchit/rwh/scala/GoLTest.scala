@@ -134,6 +134,12 @@ class GoLTest extends FunSuite {
     field.setCell(1)(3)(LivingCell)
     assert(field.getNeighborCount(1)(2) === 4)
   }
+  test("we can ask for the neighborcount of the cell at 1,2 with 8 neighbors") {
+    val field = new Field
+    for (row <- 0 to 8; col <- 0 to 8)
+      field.setCell(row)(col)(LivingCell)
+    assert(field.getNeighborCount(1)(2) === 8)
+  }
 
   test("cell in question does not count as neighbor") {
     val field = new Field
@@ -142,5 +148,10 @@ class GoLTest extends FunSuite {
     field.setCell(0)(2)(LivingCell)
     field.setCell(1)(3)(LivingCell)
     assert(field.getNeighborCount(1)(2) === 3)
+  }
+
+  test("on field iteration we get a new field"){
+    val field = new Field
+    val field2 = field.iterate
   }
 }
