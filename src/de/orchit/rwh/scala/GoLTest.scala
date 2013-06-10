@@ -4,25 +4,28 @@ import org.scalatest.FunSuite
 
 
 class GoLTest extends FunSuite {
-  trait Cell{
-    def isDead={
-      this==DeadCell
+
+  trait Cell {
+    def isDead = {
+      this == DeadCell
     }
-    def nextState(neighbors:Int):Cell
+
+    def nextState(neighbors: Int): Cell
   }
-  object DeadCell extends Cell{
-    def nextState(neighbors:Int)={
-      if(neighbors>2)
+
+  object DeadCell extends Cell {
+    def nextState(neighbors: Int) = {
+      if (neighbors > 2)
         LivingCell
       else
         this
     }
   }
 
-  object LivingCell extends Cell{
+  object LivingCell extends Cell {
     def nextState(neighbors: Int) = {
-        if(neighbors<2 || neighbors > 3) DeadCell
-        else LivingCell
+      if (neighbors < 2 || neighbors > 3) DeadCell
+      else LivingCell
     }
   }
 
@@ -64,6 +67,10 @@ class GoLTest extends FunSuite {
 
   test("a dead cell is still dead when it has 2 neighbors") {
     assert(DeadCell.nextState(2).isDead === true, "Cell should have still be dead")
+  }
+
+  test("a dead cell is still dead when it has 4 neighbors") {
+    assert(DeadCell.nextState(4).isDead === true, "Cell should have still be dead")
   }
 
 
