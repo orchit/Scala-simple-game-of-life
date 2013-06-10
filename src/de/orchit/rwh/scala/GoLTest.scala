@@ -159,4 +159,38 @@ class GoLTest extends FunSuite {
     val field2 = field.iterate
     assert(field != field2)
   }
+
+  test("iteration with three living cells in a row will result in 3 cells orthogonal to the row"){
+    val d:Cell = DeadCell
+    val l:Cell = LivingCell
+    val field = new Field
+    val init = Array(
+      Array(d,d,d,d,d,d,d,d,d),
+      Array(d,d,d,d,d,d,d,d,d),
+      Array(d,d,d,d,d,d,d,d,d),
+      Array(d,d,d,l,l,l,d,d,d),
+      Array(d,d,d,d,d,d,d,d,d),
+      Array(d,d,d,d,d,d,d,d,d),
+      Array(d,d,d,d,d,d,d,d,d),
+      Array(d,d,d,d,d,d,d,d,d),
+      Array(d,d,d,d,d,d,d,d,d)
+    )
+    for (row <- 0 to 8; col <- 0 to 8)
+      field.setCell(row)(col)(init(row)(col))
+
+    val result = field.iterate()
+    val target = Array(
+      Array(d,d,d,d,d,d,d,d,d),
+      Array(d,d,d,d,d,d,d,d,d),
+      Array(d,d,d,d,l,d,d,d,d),
+      Array(d,d,d,d,l,d,d,d,d),
+      Array(d,d,d,d,l,d,d,d,d),
+      Array(d,d,d,d,d,d,d,d,d),
+      Array(d,d,d,d,d,d,d,d,d),
+      Array(d,d,d,d,d,d,d,d,d),
+      Array(d,d,d,d,d,d,d,d,d)
+    )
+    for (row <- 0 to 8; col <- 0 to 8)
+      assert(result.getCell(row)(col)===target(row)(col), "("+row+")("+col+")")
+  }
 }
