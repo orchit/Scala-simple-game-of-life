@@ -44,5 +44,9 @@ class GoLTest extends FunSuite {
     assert(LivingCell.nextState(3).isDead === false, "Cell should have still be alive")
   }
 
+  test("a living cell dies when it has four neighbors") {
+    assert(LivingCell.nextState(4).isDead === true, "Cell should have have died of overpopulation")
+  }
+
 
 }
