@@ -59,5 +59,9 @@ class GoLTest extends FunSuite {
     assert(DeadCell.nextState(3).isDead === false, "Cell should have been reborn")
   }
 
+  test("a dead cell is still dead when it has 2 neighbors") {
+    assert(DeadCell.nextState(2).isDead === true, "Cell should have still be dead")
+  }
+
 
 }
