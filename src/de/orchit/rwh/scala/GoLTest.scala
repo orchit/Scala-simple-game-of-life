@@ -32,12 +32,16 @@ class GoLTest extends FunSuite {
   class Field {
     val rows = 9
     val cols = 9
+    private val map:Array[Array[Cell]] = Array.ofDim(rows,cols)
+    for (row <- 0 to 8; col <- 0 to 8)
+      map(row)(col)=DeadCell
 
     def getCell(row: Int)(col: Int) = {
-      DeadCell
+      map(row)(col)
     }
-    def setCell(row: Int)(col: Int)(cell:Cell){
 
+    def setCell(row: Int)(col: Int)(cell:Cell){
+      map(row)(col)=cell
     }
   }
 
