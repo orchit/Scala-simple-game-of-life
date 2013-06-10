@@ -15,7 +15,7 @@ class GoLTest extends FunSuite {
 
   object DeadCell extends Cell {
     def nextState(neighbors: Int) = {
-      if (neighbors > 2)
+      if (neighbors == 3)
         LivingCell
       else
         this
