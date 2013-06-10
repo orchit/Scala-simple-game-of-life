@@ -37,7 +37,11 @@ class GoLTest extends FunSuite {
   }
 
   test("a living cell stays alive when it has two neighbors") {
-    assert(LivingCell.nextState(2).isDead === false, "Cell should have died of loneliness")
+    assert(LivingCell.nextState(2).isDead === false, "Cell should still be alive")
+  }
+
+  test("a living cell stays alive when it has three neighbors") {
+    assert(LivingCell.nextState(3).isDead === false, "Cell should have still be alive")
   }
 
 
