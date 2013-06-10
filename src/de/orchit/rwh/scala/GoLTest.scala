@@ -157,5 +157,6 @@ class GoLTest extends FunSuite {
   test("on field iteration we get a new field"){
     val field = new Field
     val field2 = field.iterate
+    assert(field != field2)
   }
 }
