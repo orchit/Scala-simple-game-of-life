@@ -46,7 +46,8 @@ class GoLTest extends FunSuite {
 
     def getNeighborCount(row:Int)(col:Int)={
       var count=0;
-      for (rowDelta <- -1 to 1; colDelta <- -1 to 1 if getCell(row+rowDelta)(col+colDelta)==LivingCell)
+      for (rowDelta <- -1 to 1; colDelta <- -1 to 1
+           if getCell(row+rowDelta)(col+colDelta)==LivingCell)
         count+=1
       count
     }
@@ -131,5 +132,14 @@ class GoLTest extends FunSuite {
     field.setCell(0)(2)(LivingCell)
     field.setCell(1)(3)(LivingCell)
     assert(field.getNeighborCount(1)(2) === 4)
+  }
+
+  test("cell in question does not count as neighbor"){
+    val field = new Field
+    field.setCell(0)(1)(LivingCell)
+    field.setCell(1)(2)(LivingCell)
+    field.setCell(0)(2)(LivingCell)
+    field.setCell(1)(3)(LivingCell)
+    assert(field.getNeighborCount(1)(2) === 3)
   }
 }
