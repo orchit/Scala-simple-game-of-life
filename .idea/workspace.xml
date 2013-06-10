@@ -7,7 +7,7 @@
     </list>
     <ignored path="Scala-Demo.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370857250350" ignored="false" />
+    <file path="/Dummy.txt" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370857414860" ignored="false" />
     <file path="/DateTest.scala" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370800257224" ignored="false" />
     <file path="/GoLTest.scala" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370857368556" ignored="false" />
     <file path="$USER_HOME$/projects/groupon/global-payment-service/gps-webapp/src/integration/java/de/groupon/api/payment/test/DBFixtureHelper.java" changelist="6674023c-f30f-41ba-8d13-18c941cb5ba1" time="1370849802643" ignored="false" />
@@ -98,7 +98,7 @@
       <file leaf-file-name="GoLTest.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/de/orchit/rwh/scala/GoLTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="30" selection-start="128" selection-end="128" vertical-scroll-proportion="0.16719745">
+            <state line="7" column="30" selection-start="158" selection-end="158" vertical-scroll-proportion="0.16719745">
               <folding />
             </state>
           </provider>
@@ -458,7 +458,11 @@
       <created>1370857253343</created>
       <updated>1370857253343</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="10 red we can have a living cell">
+      <created>1370857428462</created>
+      <updated>1370857428462</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -537,7 +541,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="9 green REFACTOR Class to Object" />
+    <option name="LAST_COMMIT_MESSAGE" value="10 red we can have a living cell" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -565,6 +569,7 @@
     <MESSAGE value="7 green we have a dead cell" />
     <MESSAGE value="8 green REFACTOR Cell to DeadCell" />
     <MESSAGE value="9 green REFACTOR Class to Object" />
+    <MESSAGE value="10 red we can have a living cell" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -602,7 +607,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/de/orchit/rwh/scala/GoLTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="30" selection-start="128" selection-end="128" vertical-scroll-proportion="0.16719745">
+        <state line="7" column="30" selection-start="158" selection-end="158" vertical-scroll-proportion="0.16719745">
           <folding />
         </state>
       </provider>
