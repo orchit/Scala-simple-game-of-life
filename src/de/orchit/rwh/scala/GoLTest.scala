@@ -28,11 +28,13 @@ class GoLTest extends FunSuite {
       else LivingCell
     }
   }
-  class Field{
+
+  class Field {
     val rows = 9
     val cols = 9
-    def getCell(row:Int)(col:Int)={
-        DeadCell
+
+    def getCell(row: Int)(col: Int) = {
+      DeadCell
     }
   }
 
@@ -80,15 +82,19 @@ class GoLTest extends FunSuite {
     assert(DeadCell.nextState(4).isDead === true, "Cell should have still be dead")
   }
 
-  test("we have a field with 9 rows and 9 cols"){
+  test("we have a field with 9 rows and 9 cols") {
     assert((new Field).rows === 9)
     assert((new Field).cols === 9)
   }
 
-  test("the field is initially filled with dead cells"){
+  test("the field is initially filled with dead cells") {
     val field = new Field
-    for(row <- 0 to 8; col <- 0 to 8 )
+    for (row <- 0 to 8; col <- 0 to 8)
       assert(field.getCell(row)(col) === DeadCell)
   }
 
+  test("We can set values in the field boundaries"){
+    val field = new Field
+    field.setCell(2,3,LivingCell)
+  }
 }
