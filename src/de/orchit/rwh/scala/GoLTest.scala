@@ -118,6 +118,15 @@ class GoLTest extends FunSuite {
     val field = new Field
     field.setCell(0)(1)(LivingCell)
     field.setCell(1)(3)(LivingCell)
-    assert(field.getNeighborCount(1)(1) === 2)
+    assert(field.getNeighborCount(1)(2) === 2)
+  }
+
+  test("we can ask for the neighborcount of the cell at 1,2 with 4 neighbors"){
+    val field = new Field
+    field.setCell(0)(1)(LivingCell)
+    field.setCell(1)(1)(LivingCell)
+    field.setCell(0)(2)(LivingCell)
+    field.setCell(1)(3)(LivingCell)
+    assert(field.getNeighborCount(1)(2) === 4)
   }
 }
