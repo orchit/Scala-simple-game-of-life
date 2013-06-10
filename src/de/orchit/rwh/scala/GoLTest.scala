@@ -31,6 +31,9 @@ class GoLTest extends FunSuite {
   class Field{
     val rows = 9
     val cols = 9
+    def getCell(row:Int)(col:Int){
+        LivingCell
+    }
   }
 
   test("we have a dead cell") {
