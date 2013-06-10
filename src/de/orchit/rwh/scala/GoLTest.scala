@@ -4,10 +4,10 @@ import org.scalatest.FunSuite
 
 
 class GoLTest extends FunSuite{
-  class GolCell{
+  class GolCell{}
 
-  }
-  test("we have a cell"){
-    new GolCell
+  test("we have a dead cell"){
+    val cell = new GolCell
+    assert(cell isDead,"Cell is not dead")
   }
 }
